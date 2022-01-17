@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Shopify Application
+
+Hi Thank you so much for visiting my work! This is a Frontend project which pulls data from NASA's EPIC API and displays
+images of the Earth on different dates. Play around with the different dates to see Earth on your chosen day! You can also like and unlike the image and see other information like longitude and latitude.
+
+## Below you Will see Instructions for running the App locally
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
