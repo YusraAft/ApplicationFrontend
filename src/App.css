@@ -1,0 +1,23 @@
+.Date {
+  padding-top: 7%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.instructions {
+  font-size: 60px;
+  color: white;
+  font-weight: "bold";
+}
+
+p {
+  color: white;
+  font-size: 30px;
+}
+
+.submit {
+  font-size: 30px;
+  cursor: pointer;
+}
