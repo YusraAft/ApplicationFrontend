@@ -31,6 +31,7 @@ function App() {
   }, []
 
   )
+ 
 
   function pullPictures(pictures){
     
@@ -73,6 +74,8 @@ function App() {
   }
 
   return (
+   
+ 
     <div>
     <div className="Date">
       <label className="instructions">Pick The Date You Want to See Earth On:</label>
