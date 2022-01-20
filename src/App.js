@@ -9,7 +9,7 @@ import { FaRegThumbsUp, FaThumbsDown, FaThumbsUp } from 'react-icons/fa'
 function App() {
 
   const baseURL = "https://epic.gsfc.nasa.gov/api/natural/date/"
-   
+
   let lastDay = new Date((new Date()).valueOf() - 1000*14400*24);
   lastDay = lastDay.toISOString().split('T')[0]
   let firstDay = new Date('2015-06-18')
@@ -31,10 +31,9 @@ function App() {
   }, []
 
   )
- 
 
   function pullPictures(pictures){
-    
+
     let descriptions = []
     let len_ = pictures.length
     for(let i = 0; i < len_; i++){
@@ -47,10 +46,10 @@ function App() {
       let identifier = pictures[i].identifier
       let dictionary = {id: i, picture: pic, lon:longitude, lat:latitude, like:<FaRegThumbsUp/>, liked: false, date:date, id:identifier}
       descriptions.push(dictionary)
-      
+
     }
     setDescription(descriptions)
-    
+
   }
 
   useEffect(() => {
@@ -61,28 +60,26 @@ function App() {
           .then(pictures =>{
             pullPictures(pictures)
             console.log(pictures[0])
-            
+
           });
         }
   getPictures(finalDate)
       }
   }, [finalDate]
   )
-  
+
   const styleObj = {
     fontSize: 30
   }
 
   return (
-   
- 
     <div>
     <div className="Date">
       <label className="instructions">Pick The Date You Want to See Earth On:</label>
       <form onSubmit={handleSubmit}>
         <input type="date" id="dateChosen"  style={styleObj} min={firstDay} max={lastDay} value ={selectedDate}
           onChange={(e)=>setSelectedDate(e.target.value)}/>
-          
+
         <p>{`Please note, only enter dates between ${firstDay} and ${lastDay} (please note this is in YYYY/MM/DD format) `}</p>
         <button className="submit" onClick={(console.log(selectedDate))}>Submit</button>
       </form>
@@ -96,7 +93,7 @@ function App() {
     </div>
 
   );
-  
+
 }
 
 
