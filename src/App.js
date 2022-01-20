@@ -10,7 +10,7 @@ function App() {
 
   const baseURL = "https://epic.gsfc.nasa.gov/api/natural/date/"
 
-  let lastDay = new Date((new Date()).valueOf() - 1000*14400*24);
+  let lastDay = new Date((new Date()).valueOf() - 1000*28800*24);
   lastDay = lastDay.toISOString().split('T')[0]
   let firstDay = new Date('2015-06-18')
   firstDay = firstDay.toISOString().split('T')[0]
